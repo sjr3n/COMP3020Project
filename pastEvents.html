@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gap Filler - Home</title>
+    <title>Gap Filler - Past Events</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body> 
+<body>
     <div class="container">
         <header class="header">
             <div class="logo">Gap Filler</div>
@@ -33,45 +33,46 @@
         </header>
 
         <main class="main-content">
-            <div class="button-group">
+            <h1 class="page-title">PAST EVENTS</h1>
+            
+            <div class="events-list">
+                <div class="event-item">
+                    • Lunch - U of M - University Centre - 12:30PM - 10/04/2025
+                </div>
                 
-                <div class="button-row">
-                    <div class="tooltip-left">
-                        Check out all the events for today!
-                    </div>
-                    <button class="btn btn-secondary" onclick="window.location.href='all-events.html'">
-                        See all Events
-                    </button>
+                <div class="event-item">
+                    • Chess Club - VW Social Club - 8:00PM - 10/02/2025
                 </div>
-
-                <div class="button-row">
-                    <div class="tooltip-left">
-                        Not sure what you need? Click here!
-                    </div>
-                    <button class="btn btn-primary" onclick="alert('Questionnaire coming soon!')">
-                        Questionnaire
-                    </button>
+                
+                <div class="event-item">
+                    • Chess Club - 230 University College - 4:00PM - 09/22/2025
                 </div>
-
-                <div class="button-row">
-                    <div class="tooltip-left">
-                        Have an idea? Add it here!
-                    </div>
-                    <button class="btn btn-secondary" onclick="window.location.href='addEvent.html'">
-                        Add Event
-                    </button>
+                
+                <div class="event-item">
+                    • Lunch - University Centre - 1:00PM - 09/19/2025
                 </div>
+                
+                <div class="event-item">
+                    • UMAnime Club - University Centre - 1:30PM - 09/17/2025
+                </div>
+                
+                <div class="event-item">
+                    • Sleep - Engineering Lounge - 12:30PM - 09/16/2025
+                </div>
+                
+                <div class="event-item">
+                    • Breakfast - Engineering Building - 8:00AM - 09/15/2025
+                </div>
+            </div>
 
+            <div style="margin-top: 20px;">
+                <button class="btn-secondary" onclick="window.location.href='index.html'">
+                    Back to Home
+                </button>
             </div>
         </main>
 
         <footer class="footer">
-            <button class="btn-past-events" onclick="window.location.href='pastEvents.html'">
-                Past Events
-            </button>
-            <div class="footer-note">
-                Forgot where you've been? We got you covered!
-            </div>
         </footer>
     </div>
 </body>

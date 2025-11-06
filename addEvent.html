@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gap Filler - Add Event</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">Gap Filler</div>
+            <div class="header-icons">
+                <a href="index.html" class="icon-link" title="Home">
+                    <span class="icon">🏠</span>
+                </a>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" class="theme-switch-input">
+                    <label for="theme-switch" class="theme-switch-label">
+                        <span class="theme-icon sun">☀️</span>
+                        <span class="theme-icon moon">🌙</span>
+                    </label>
+                </div>
+                <div class="profile-dropdown">
+                    <button class="icon profile-icon" id="profileButton">
+                        👤
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="index.html" class="dropdown-item">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <h1 class="page-title">ADD AN EVENT!</h1>
+            
+            <div class="form-container">
+                <form id="addEventForm">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            class="form-input" 
+                            placeholder="Enter Title"
+                            id="eventTitle"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <div class="drag-drop-area" id="dropArea">
+                            Drag/Drop Image
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea 
+                            class="form-input form-textarea" 
+                            placeholder="Enter event description..."
+                            id="eventDescription"
+                        ></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel" onclick="window.location.href='index.html'">
+                            CANCEL
+                        </button>
+                        <button type="submit" class="btn-submit">
+                            SUBMIT
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer class="footer">
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('addEventForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Event submitted! (This is a demo - no actual submission happening)');
+        });
+
+        const dropArea = document.getElementById('dropArea');
+
+        dropArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropArea.style.borderColor = '#667eea';
+            dropArea.style.background = '#f0f0ff';
+        });
+
+        dropArea.addEventListener('dragleave', () => {
+            dropArea.style.borderColor = '#ccc';
+            dropArea.style.background = '#f9f9f9';
+        });
+
+        dropArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropArea.textContent = 'Image uploaded! ✓';
+            dropArea.style.color = '#667eea';
+        });
+    </script>
+</body>
+</html>
