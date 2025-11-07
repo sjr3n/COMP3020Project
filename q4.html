@@ -32,15 +32,34 @@
             </div>
         </header>
 
-        <main class="main-content">
+                <main class="main-content">
             <div class="questionnaire-container">
-                <h1 class="question-title">When are you free?</h1>
+                <h1 class="question-title">How much school work do you have?</h1>
+
+                <div class="work-slider-container">
+                    <div class="work-icons">
+                        <!-- Don't mind this... just wanted to fill something in -->
+                        <span class="work-icon">🤤</span>
+                        <span class="work-icon">😅</span>
+                        <span class="work-icon">🫡</span>
+                        <span class="work-icon">🥲</span>
+                        <span class="work-icon">😭</span>
+                    </div>
+                    <div class="slider-scale">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                    </div>
+                    <input type="range" min="1" max="5" value="3" class="work-slider" id="workSlider">
+                </div>
 
                 <div class="nav-buttons">
-                    <button class="btn-nav btn-previous" onclick="window.location.href='index.html'">
+                    <button class="btn-nav btn-previous" onclick="window.location.href='q3.html'">
                         Previous
                     </button>
-                    <button class="btn-nav btn-next" onclick="window.location.href='q2.html'">
+                    <button class="btn-nav btn-next" onclick="window.location.href='allEvents.html'">
                         Next
                     </button>
                 </div>
