@@ -36,27 +36,18 @@
             <div class="button-group">
                 
                 <div class="button-row">
-                    <div class="tooltip-left">
-                        Check out all the events for today!
-                    </div>
-                    <button class="btn btn-secondary" onclick="window.location.href='all-events.html'">
+                    <button class="btn btn-secondary" onclick="alert('All events coming soon!')">
                         See all Events
                     </button>
                 </div>
 
                 <div class="button-row">
-                    <div class="tooltip-left">
-                        Not sure what you need? Click here!
-                    </div>
                     <button class="btn btn-primary" onclick="alert('Questionnaire coming soon!')">
                         Questionnaire
                     </button>
                 </div>
 
                 <div class="button-row">
-                    <div class="tooltip-left">
-                        Have an idea? Add it here!
-                    </div>
                     <button class="btn btn-secondary" onclick="window.location.href='addEvent.html'">
                         Add Event
                     </button>
@@ -74,5 +65,26 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        const profileButton = document.getElementById('profileButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        profileButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!profileButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+
+        const themeSwitch = document.getElementById('theme-switch');
+        themeSwitch.addEventListener('change', function() {
+            console.log('Theme toggle clicked:', this.checked ? 'Dark' : 'Light');
+        });
+    </script>
 </body>
 </html>
